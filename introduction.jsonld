@@ -1,0 +1,99 @@
+{
+    "@context": {
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "teach": "http://linkedscience.org/teach/ns#",
+        "dbo": "https://dbpedia.org/ontology/",
+        "gn": "http://www.geonames.org/ontology#",
+
+        "name": "foaf:name",
+        "age": "foaf:age",
+        "Person": "foaf:Person",
+        "knows": {
+            "@id": "foaf:knows",
+            "@type": "@id"
+        },
+        "course": "teach:Course",
+        "courseName": "teach:courseTitle",
+        "courseCode": "https://schema.org/courseCode",
+        "module": "teach:module",
+        "academicTerm": "teach:academicTerm",
+        "ects": "teach:ects",
+        "teacher": "teach:teacher",
+        "StudyProgram": "teach:StudyProgram",
+        "educationalInstitution": "dbo:EducationalInstitution",
+        "universityName": "dbo:university",
+        "locatedIn": "dbo:location",
+        "postalCode": "gn:postalCode",
+        "city": "gn:name",
+        "country": "gn:parentCountry",
+        "enrollment": {
+            "@id": "https://w3id.org/skgo/modsci#isStudentOf",
+            "@type": "@id"
+        },
+      "hobbies" : "foaf:interest"
+    },
+    
+    "@id": "https://github.ugent.be/pages/juvis/juvis.github.io/",
+    "@type": "Person",
+    
+    "name": {"@value": "Juliette Vis", "@type": "xsd:string" },
+    
+    "age": { "@value": "22","@type": "xsd:integer"},
+
+    "StudyProgram": {"@value": "https://studiekiezer.ugent.be/2025/master-of-science-in-computer-science-engineering-en/programma"},
+    
+    "educationalInstitution": {
+        "@id": "https://www.ugent.be/",
+        "@type": "University",
+        "universityName": { "@value": "Ghent University" , "@type": "xsd:string" },
+        "locatedIn": {
+            "@id": "https://sws.geonames.org/2797656/",
+            "@type": "city",
+            "postalCode": {"@value": "9000", "@type":"xsd:string" },
+            "country": {"@value": "https://sws.geonames.org/2802361/"}
+        }
+    },
+    
+    "enrollment": {
+        "@id": "https://pietercolpaert.be/teaching/kg/#2024-2025",
+        "@type": "Course",
+        "courseName": { "@value": "Knowledge Graphs", "@type":"xsd:string" },
+        "courseCode": { "@value": "E018160" , "@type":"xsd:string"},
+        "module": { "@value": "Data Engineering", "@type": "xsd:string" },
+        "academicTerm": { "@value": "Spring 2025", "@type": "xsd:string" },
+        "ects": { "@value": "3", "@type": "xsd:integer" },
+        "teacher": {
+            "@id": "https://pietercolpaert.be/#me",
+            "@type": "Person",
+            "name": { "@value": "Pieter Colpaert" , "@type":"xsd:string" }
+        }
+    },
+    
+    "knows": [
+        {
+            "@id": "https://example.org/KiaraVermeersch",
+            "@type": "Person",
+            "name": {"@value": "Kiara Vermeersch", "@type":"xsd:string"}
+        },
+        {
+            "@id": "https://example.org/LanderMaes",
+            "@type": "Person",
+            "name": {"@value": "Lander Maes", "@type":"xsd:string"}
+        },
+        {
+            "@id": "https://example.org/IanVanKets",
+            "@type": "Person",
+            "name": {"@value": "Ian Van Kets", "@type":"xsd:string"}
+        }
+    ],
+  
+  "hobbies": [
+        { "@value": "dancing", "@type": "xsd:string" },
+        { "@value": "cooking", "@type": "xsd:string" },
+        { "@value": "hiking", "@type": "xsd:string" },
+        { "@value": "travelling", "@type": "xsd:string" }
+  ]
+  
+}
+
