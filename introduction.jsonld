@@ -72,7 +72,7 @@
     
     "knows": [
         {
-            "@id": "https://example.org/KiaraVermeersch",
+            "@id": "https://kiaverme.github.io/Assignment2.jsonld",
             "@type": "Person",
             "name": {"@value": "Kiara Vermeersch", "@type":"xsd:string"}
         },
@@ -82,7 +82,7 @@
             "name": {"@value": "Lander Maes", "@type":"xsd:string"}
         },
         {
-            "@id": "https://example.org/IanVanKets",
+            "@id": "https://ivketsgit.github.io/IanVanKets.github.io/assignment_2.ttl",
             "@type": "Person",
             "name": {"@value": "Ian Van Kets", "@type":"xsd:string"}
         }
