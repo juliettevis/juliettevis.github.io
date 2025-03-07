@@ -34,7 +34,7 @@
       "hobbies" : "foaf:interest"
     },
     
-    "@id": "https://juliettevis.github.io/introduction.jsonld",
+    "@id": "https://juliettevis.github.io/introduction.jsonld#me",
     "@type": "Person",
     
     "name": {"@value": "Juliette Vis", "@type": "xsd:string" },
