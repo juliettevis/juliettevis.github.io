@@ -72,7 +72,7 @@
     
     "knows": [
         {
-            "@id": "https://kiaverme.github.io/Assignment2.jsonld",
+            "@id": "https://kiaverme.github.io/Assignment2.jsonld#me",
             "@type": "Person",
             "name": {"@value": "Kiara Vermeersch", "@type":"xsd:string"}
         },
@@ -86,11 +86,16 @@
             "@type": "Person",
             "name": {"@value": "Ian Van Kets", "@type":"xsd:string"}
         },
-	{
-            "@id": "https://www.ebisi.be/stijndeknudt/#me/application/ld+json",
+	    {
+            "@id": "https://tobiashendrickx.be/about#me",
             "@type": "Person",
-            "name": {"@value": "Stijn Deknudt", "@type":"xsd:string"}
-	}
+            "name": {"@value": "Tobias Hendrickx", "@type":"xsd:string"}
+	    },
+        {
+            "@id": "https://ginfinai.be/#me",
+            "@type": "Person",
+            "name" : {"@value": "Gerben Ceuppens", "@type":"xsd:string"}
+        }
     ],
   
   "hobbies": [
