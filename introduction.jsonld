@@ -86,9 +86,11 @@
             "@type": "Person",
             "name": {"@value": "Ian Van Kets", "@type":"xsd:string"}
         },
+	{
             "@id": "https://www.ebisi.be/stijndeknudt/#me/application/ld+json",
             "@type": "Person",
             "name": {"@value": "Stijn Deknudt", "@type":"xsd:string"}
+	}
     ],
   
   "hobbies": [
