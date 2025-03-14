@@ -77,7 +77,7 @@
             "name": {"@value": "Kiara Vermeersch", "@type":"xsd:string"}
         },
         {
-            "@id": "https://example.org/LanderMaes",
+            "@id": "https://delany123.github.io/intro/intro.ttl#me",
             "@type": "Person",
             "name": {"@value": "Lander Maes", "@type":"xsd:string"}
         },
