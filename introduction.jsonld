@@ -5,14 +5,10 @@
         "teach": "http://linkedscience.org/teach/ns#",
         "dbo": "https://dbpedia.org/ontology/",
         "gn": "http://www.geonames.org/ontology#",
-
         "name": "foaf:name",
         "age": "foaf:age",
         "Person": "foaf:Person",
-        "knows": {
-            "@id": "foaf:knows",
-            "@type": "@id"
-        },
+        "knows": { "@id": "foaf:knows", "@type": "@id" },
         "course": "teach:Course",
         "courseName": "teach:courseTitle",
         "courseCode": "https://schema.org/courseCode",
@@ -20,90 +16,52 @@
         "academicTerm": "teach:academicTerm",
         "ects": "teach:ects",
         "teacher": "teach:teacher",
-        "StudyProgram": "teach:StudyProgram",
+        "studyProgram": "teach:studyProgram",
         "educationalInstitution": "dbo:EducationalInstitution",
-        "universityName": "dbo:university",
         "locatedIn": "dbo:location",
         "postalCode": "gn:postalCode",
         "city": "gn:name",
         "country": "gn:parentCountry",
-        "enrollment": {
-            "@id": "https://w3id.org/skgo/modsci#isStudentOf",
-            "@type": "@id"
-        },
-      "hobbies" : "foaf:interest"
+        "isStudentOf": "https://w3id.org/skgo/modsci#isStudentOf",
+        "enrollment": { "@id": "https://schema.org/hasCourse", "@type": "@id" },
+        "hobbies": "foaf:interest"
     },
     
     "@id": "https://juliettevis.github.io/introduction.jsonld#me",
     "@type": "Person",
     
-    "name": {"@value": "Juliette Vis", "@type": "xsd:string" },
-    
-    "age": { "@value": "22","@type": "xsd:integer"},
-
-    "StudyProgram": {"@value": "https://studiekiezer.ugent.be/2025/master-of-science-in-computer-science-engineering-en/programma"},
+    "name": { "@value": "Juliette Vis", "@type": "xsd:string" },
+    "age": { "@value": "22", "@type": "xsd:integer" },
     
     "educationalInstitution": {
         "@id": "https://www.ugent.be/",
-        "@type": "University",
-        "universityName": { "@value": "Ghent University" , "@type": "xsd:string" },
+        "@type": "dbo:EducationalInstitution",
         "locatedIn": {
             "@id": "https://sws.geonames.org/2797656/",
-            "@type": "city",
-            "postalCode": {"@value": "9000", "@type":"xsd:string" },
-            "country": {"@value": "https://sws.geonames.org/2802361/"}
+            "gn:name": "Ghent",
+            "postalCode": { "@value": "9000", "@type": "xsd:string" },
+            "country": { "@id": "https://sws.geonames.org/2802361/" }
         }
     },
     
-    "enrollment": {
-        "@id": "https://pietercolpaert.be/teaching/kg/#2024-2025",
-        "@type": "Course",
-        "courseName": { "@value": "Knowledge Graphs", "@type":"xsd:string" },
-        "courseCode": { "@value": "E018160" , "@type":"xsd:string"},
-        "module": { "@value": "Data Engineering", "@type": "xsd:string" },
-        "academicTerm": { "@value": "Spring 2025", "@type": "xsd:string" },
-        "ects": { "@value": "3", "@type": "xsd:integer" },
-        "teacher": {
-            "@id": "https://pietercolpaert.be/#me",
-            "@type": "Person",
-            "name": { "@value": "Pieter Colpaert" , "@type":"xsd:string" }
-        }
-    },
+    "isStudentOf": { "@id": "https://pietercolpaert.be/#me", "@type": "Person" },
     
+    "studyProgram": { "@id": "https://studiekiezer.ugent.be/2025/master-of-science-in-computer-science-engineering-en/programma" },
+
+    "enrollment": { "@id": "https://pietercolpaert.be/teaching/kg/#2024-2025" },
+
     "knows": [
-        {
-            "@id": "https://kiaverme.github.io/Assignment2.jsonld#me",
-            "@type": "Person",
-            "name": {"@value": "Kiara Vermeersch", "@type":"xsd:string"}
-        },
-        {
-            "@id": "https://delany123.github.io/intro/intro.ttl#me",
-            "@type": "Person",
-            "name": {"@value": "Lander Maes", "@type":"xsd:string"}
-        },
-        {
-            "@id": "https://ivketsgit.github.io/IanVanKets.github.io/assignment_2.ttl#me",
-            "@type": "Person",
-            "name": {"@value": "Ian Van Kets", "@type":"xsd:string"}
-        },
-	    {
-            "@id": "https://tobiashendrickx.be/about#me",
-            "@type": "Person",
-            "name": {"@value": "Tobias Hendrickx", "@type":"xsd:string"}
-	    },
-        {
-            "@id": "https://ginfinai.be/#me",
-            "@type": "Person",
-            "name" : {"@value": "Gerben Ceuppens", "@type":"xsd:string"}
-        }
+        { "@id": "https://kiaverme.github.io/Assignment2.jsonld#me", "@type": "Person", "name": { "@value": "Kiara Vermeersch", "@type": "xsd:string" } },
+        { "@id": "https://delany123.github.io/intro/intro.ttl#me", "@type": "Person", "name": { "@value": "Lander Maes", "@type": "xsd:string" } },
+        { "@id": "https://ivketsgit.github.io/IanVanKets.github.io/assignment_2.ttl#me", "@type": "Person", "name": { "@value": "Ian Van Kets", "@type": "xsd:string" } },
+        { "@id": "https://tobiashendrickx.be/about#me", "@type": "Person", "name": { "@value": "Tobias Hendrickx", "@type": "xsd:string" } },
+        { "@id": "https://ginfinai.be/#me", "@type": "Person", "name": { "@value": "Gerben Ceuppens", "@type": "xsd:string" } }
     ],
   
-  "hobbies": [
-        { "@value": "dancing", "@type": "xsd:string" },
-        { "@value": "cooking", "@type": "xsd:string" },
-        { "@value": "hiking", "@type": "xsd:string" },
-        { "@value": "travelling", "@type": "xsd:string" }
-  ]
-  
+    "hobbies": [
+        { "@id": "https://example.com/articles/dancing" },
+        { "@id": "https://example.com/articles/cooking" },
+        { "@id": "https://example.com/articles/hiking" },
+        { "@id": "https://example.com/articles/travelling" }
+    ]
 }
-
