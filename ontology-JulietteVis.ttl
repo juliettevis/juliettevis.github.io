@@ -1,0 +1,59 @@
+@prefix juvis: <https://juliettevis.github.io/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+#classes
+juvis:Photo a rdfs:Class;
+    rdfs:label "Photo";
+    rdfs:comment "A photo taken by a person, typically with a camera" ;
+    rdfs:subClassOf foaf:Image.
+
+juvis:Location a rdfs:Class;
+    rdfs:label "Location";
+    rdfs:comment "The location where a photo was taken.".
+
+juvis:Photographer a rdfs:Class;
+    rdfs:label "Photographer";
+    rdfs:comment "A person who takes photos";
+    rdfs:subClassOf foaf:Person.
+
+#properties
+juvis:takenBy a rdf:Property;
+    rdfs:domain juvis:Photo;
+    rdfs:range a juvis:Photographer ;
+    rdfs:label "taken by";
+    rdfs:comment "Specification of who has taken the photo.";
+    rdfs:subPropertyOf foaf:maker .
+
+juvis:takenAt a rdf:Property;
+    rdfs:domain juvis:Photo;
+    rdfs:range juvis:Location ; 
+    rdfs:label "taken at";
+    rdfs:comment "Specificationof where the photo was taken.".
+
+juvis:locationName a rdf:Property ; 
+    rdfs:domain juvis:Location;
+    rdfs:range xsd:string;
+    rdfs:label "location name";
+    rdfs:comment "The name of the location where the photo was taken.".
+
+juvis:photographerName a rdf:Property;
+    rdfs:domain juvis:Photographer;
+    rdfs:range xsd:string;
+    rdfs:label "photographer's name";
+    rdfs:comment "Name of the photographer." ;
+    rdfs:subPropertyOf foaf:name.
+
+juvis:title a rdf:Property;
+    rdfs:domain juvis:Photo;
+    rdfs:range xsd:string;
+    rdfs:label "title";
+    rdfs:comment "title of the photo.";
+    rdfs:subPropertyOf dc:title .
+
+juvis:depicts a rdf:Property;
+    rdfs:domain juvis:Photo;
+    rdfs:range rdfs:Resource;
+    rdfs:label "depicts";
+    rdfs:comment "specifies what is shown in the photo";
+    rdfs:subPropertyOf foaf:depicts.

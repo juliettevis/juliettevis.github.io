@@ -1,0 +1,35 @@
+@prefix juvis: <https://juliettevis.github.io/#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://images.squarespace-cdn.com/content/v1/649a6c90d2780d4d5f6a8b2b/fdfc6336-79c1-4193-9060-f654e2a5c745/%40jordlg_Dolomites-3.jpg?format=2500w> 
+    a juvis:Photo ;
+    juvis:takenBy <https://www.jord-lg.com/> ;
+    juvis:takenAt <https://www.wikidata.org/wiki/Q1283> ;
+    juvis:title "Dolomites Landscape" ;
+    juvis:depicts <https://www.wikidata.org/wiki/Q527>,         #sky
+                  <https://www.wikidata.org/wiki/Q33971>,   # leaves
+                  <https://www.wikidata.org/wiki/Q10884>,   # tree
+                  <https://www.wikidata.org/wiki/Q8074> ;   # clouds
+
+<https://www.jord-lg.com/> 
+    a juvis:Photographer ;
+    juvis:photographerName "Jordan L" .
+
+<https://nomadict.org/wp-content/uploads/2023/06/Asad-Sarfraz-@asad.sarfraz_-Pakistan-Best-of-the-Week.jpg> 
+    a juvis:Photo ;
+    juvis:takenBy <https://1x.com/asadsarfraz> ;
+    juvis:takenAt <https://www.wikidata.org/wiki/Q843> ;
+    juvis:title "The highest cold desert in the world" ;
+    juvis:depicts <https://www.wikidata.org/wiki/Q8502>,        # mountain
+                  <https://www.wikidata.org/wiki/Q13105405>,    # hiker
+                  <https://www.wikidata.org/wiki/Q8514> ;       # desert
+
+<https://1x.com/asadsarfraz> 
+    a juvis:Photographer ;
+    juvis:photographerName "Asad Sarfraz" .
+
+
+<https://www.aqueon.com/-/media/project/oneweb/aqueon/us/blog/ways-to-know-your-fish-are-happy/fish-are-happy-and-healthy-1.png?h=66%25&w=100%25&hash=D8A0FDD1D6120B433A8F206753F1D10E> 
+    a juvis:Photo;
+    juvis:title "Happpy fish"
+    juvis:depicts: <https://juliettevis.github.io/introduction.jsonld#me> .
