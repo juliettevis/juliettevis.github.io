@@ -29,6 +29,7 @@
     
     "@id": "https://juliettevis.github.io/introduction.jsonld#me",
     "http://www.w3.org/ns/solid/terms#oidcIssuerRegistrationToken": "8890275b-9003-44b2-a8eb-01086cce85b3",
+    "http://www.w3.org/ns/solid/terms#oidcIssuer": "https://kg.course.knows.idlab.ugent.be/",
 
     "@type": "Person",
     
