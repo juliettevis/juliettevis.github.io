@@ -28,6 +28,9 @@
     },
     
     "@id": "https://juliettevis.github.io/introduction.jsonld#me",
+
+    "http://www.w3.org/ns/solid/terms#oidcIssuerRegistrationToken": "2dcf2f83-7217-430c-9f85-11108cc8a039",
+
     "@type": "Person",
     
     "name": { "@value": "Juliette Vis", "@type": "xsd:string" },
